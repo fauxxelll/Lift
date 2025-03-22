@@ -1,2 +1,2 @@
-﻿@extern
+﻿#extern
 fn print(value: any) -> void;
