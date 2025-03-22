@@ -1,0 +1,11 @@
+﻿fn main() {
+  list = linked_list(int);
+
+  list.add(10);
+  list.add(5);
+  list.add(2);
+
+  print(*list[0]); // 10
+  print(*list[1]); // 5
+  print(*list[2]); // 2
+}

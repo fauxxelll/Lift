@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftParser", "LiftParser\LiftParser.csproj", "{8F94541F-CC39-470A-8367-1CB4051386A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftCLI", "LiftCLI\LiftCLI.csproj", "{F2283028-BF38-4D91-AB75-2CFE0AC644B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftInterpreter", "LiftInterpreter\LiftInterpreter.csproj", "{CA3204BC-0BFB-4C04-8D06-EBA3F4C8BD07}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Examples", "Examples\Examples.shproj", "{F325E6C1-C5CA-4F40-B73D-0A3C2F3CD5AC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "StandardLibrary", "StandardLibrary\StandardLibrary.shproj", "{0AFA21B1-9D18-423C-9D9A-77F5E6926FB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F94541F-CC39-470A-8367-1CB4051386A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F94541F-CC39-470A-8367-1CB4051386A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F94541F-CC39-470A-8367-1CB4051386A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F94541F-CC39-470A-8367-1CB4051386A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2283028-BF38-4D91-AB75-2CFE0AC644B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2283028-BF38-4D91-AB75-2CFE0AC644B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2283028-BF38-4D91-AB75-2CFE0AC644B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2283028-BF38-4D91-AB75-2CFE0AC644B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3204BC-0BFB-4C04-8D06-EBA3F4C8BD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3204BC-0BFB-4C04-8D06-EBA3F4C8BD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3204BC-0BFB-4C04-8D06-EBA3F4C8BD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3204BC-0BFB-4C04-8D06-EBA3F4C8BD07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		StandardLibrary\StandardLibrary.projitems*{0afa21b1-9d18-423c-9d9a-77f5e6926fb8}*SharedItemsImports = 13
+		Examples\Examples.projitems*{f325e6c1-c5ca-4f40-b73d-0a3c2f3cd5ac}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,97 @@
+﻿class linked_list {
+  const data_type: type!;
+
+  private class node {
+    value: data_type;
+    next: node?;
+
+    fn @constructor(value: data_type) {
+      value = value;
+    }
+  }
+
+  private head: node?;
+
+  fn @constructor(data_type: type!) {
+    data_type = data_type;
+  }
+
+  fn at(index: int) -> data_type& {
+    if (index < 0) {
+      error "Index can't be less than zero!";
+    }
+
+    current = head;
+
+    for (i = 0, i < index; i++) {
+      current = current.next;
+    }
+
+    return &current.value;
+  }
+
+  fn @indexer(index: int) = at(index);
+
+  fn add(value: data_type) {
+    to_add = node(value);
+
+    if (head == null) {
+      head = to_add;
+      return;
+    }
+    
+    current = head;
+
+    while (current.next != null) {
+      current = current.next;
+    }
+
+    current.next = to_add;
+  }
+
+  fn remove(index: int) {
+    if (index == 0) {
+      head = head.next;
+      return;
+    }
+
+    current = head;
+
+    for (i = 0; i < index - 1; i++) {
+      if (current.next == null) {
+        error "Index $index outside bounds of linked list.";
+      }
+
+      current = current.next;
+    }
+
+    current.next = current.next.next;
+  }
+
+  fn insert(index: int, value: data_type) {
+    if (index < 0) {
+      error "Index can't be less than zero!";
+    }
+
+    to_insert = node(value);
+
+    if (index == 0) {
+      to_insert.next = head;
+      head = to_insert;
+      return;
+    }
+
+    current = head;
+
+    for (i = 0; i < index - 1; i++) {
+      if (current.next == null) {
+        error "Index $index outside bounds of linked list.";
+      }
+
+      current = current.next;
+    }
+
+    to_insert.next = current.next;
+    current.next = to_insert;
+  }
+}

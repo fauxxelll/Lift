@@ -1,0 +1,16 @@
+﻿import "lift:io";
+
+// Internal
+const print_test_internal: fn(any) -> void = fn(value: any) -> void {
+	io.print(value);
+}
+
+// Explicit Void
+fn print_test_explicit_void(value: any) -> void {
+	io.print(value);
+}
+
+// Implicit Void
+fn print_test_implicit_void(value: any) {
+	io.print(value);
+}
