@@ -1,0 +1,15 @@
+﻿class index_lt_zero : condition {
+  const index: int;
+
+  fn _constructor(index: int) : base(int) {
+    this.index = index;
+  }
+}
+
+class index_outside_bounds : condition {
+  const index: int;
+
+  fn _constructor(index: int) : base(int) {
+    this.index = index;
+  }
+}

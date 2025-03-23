@@ -9,6 +9,7 @@
     <Import_RootNamespace>Examples</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)linked_list\conditions.lift" />
     <None Include="$(MSBuildThisFileDirectory)linked_list\linked_list.lift" />
     <None Include="$(MSBuildThisFileDirectory)linked_list\main.lift" />
     <None Include="$(MSBuildThisFileDirectory)syntax_showcase\functions.lift" />

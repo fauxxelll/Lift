@@ -5,20 +5,20 @@
     value: data_type;
     next: node?;
 
-    fn @constructor(value: data_type) {
-      value = value;
+    fn _constructor(value: data_type) {
+      this.value = value;
     }
   }
 
   private head: node?;
 
-  fn @constructor(data_type: type!) {
-    data_type = data_type;
+  fn _constructor(data_type: type!) {
+    this.data_type = data_type;
   }
 
   fn at(index: int) -> data_type& {
     if (index < 0) {
-      error "Index can't be less than zero!";
+      index = throw index_lt_zero(index);
     }
 
     current = head;
@@ -30,7 +30,7 @@
     return &current.value;
   }
 
-  fn @indexer(index: int) = at(index);
+  fn _indexer(index: int) = at(index);
 
   fn add(value: data_type) {
     to_add = node(value);
@@ -59,7 +59,7 @@
 
     for (i = 0; i < index - 1; i++) {
       if (current.next == null) {
-        error "Index $index outside bounds of linked list.";
+        index = throw index_outside_bounds(index);
       }
 
       current = current.next;
@@ -70,7 +70,7 @@
 
   fn insert(index: int, value: data_type) {
     if (index < 0) {
-      error "Index can't be less than zero!";
+      index = throw index_lt_zero(index);
     }
 
     to_insert = node(value);
@@ -85,7 +85,7 @@
 
     for (i = 0; i < index - 1; i++) {
       if (current.next == null) {
-        error "Index $index outside bounds of linked list.";
+        index = throw index_outside_bounds(index);
       }
 
       current = current.next;

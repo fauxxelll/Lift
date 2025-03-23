@@ -1,11 +1,21 @@
-﻿fn main() {
+﻿import "lift:io";
+
+fn main() {
+  handle index_lt_zero fn(index: int) -> int {
+    return 0;
+  }
+
+  handle index_outside_bounds fn(index: int) -> int {
+    return index - 1;
+  }
+
   list = linked_list(int);
 
   list.add(10);
   list.add(5);
   list.add(2);
 
-  print(*list[0]); // 10
-  print(*list[1]); // 5
-  print(*list[2]); // 2
+  io.print(*list[0]); // 10
+  io.print(*list[1]); // 5
+  io.print(*list[2]); // 2
 }

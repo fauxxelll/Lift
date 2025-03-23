@@ -1,2 +1,1 @@
-﻿#extern
-fn print(value: any) -> void;
+﻿extern fn print(value: any) -> void;
