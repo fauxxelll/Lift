@@ -2,7 +2,7 @@
 {
     public class Lexer()
     {
-        private static readonly Dictionary<string, TokenType> KEYWORDS = new()
+        public static readonly Dictionary<string, TokenType> KEYWORDS = new()
         {
             { "fn", TokenType.Function },
             { "class", TokenType.Class },
@@ -34,7 +34,7 @@
             _line = 1;
             _source = source;
 
-            List<Token> tokens = new();
+            List<Token> tokens = [];
 
             while (!AtEnd)
             {
@@ -307,9 +307,9 @@
             return Token(type, identifier);
         }
 
-        private static bool IsIdentifierStart(char c) => char.IsAsciiLetter(c) || c == '_';
+        public static bool IsIdentifierStart(char c) => char.IsAsciiLetter(c) || c == '_';
 
-        private static bool IsIdentifier(char c) => IsIdentifierStart(c) || char.IsAsciiDigit(c);
+        public static bool IsIdentifier(char c) => IsIdentifierStart(c) || char.IsAsciiDigit(c);
 
         private bool Match(char c)
         {
